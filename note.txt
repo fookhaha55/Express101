@@ -1,0 +1,25 @@
+nodeMon = nodeMonExpress
+CORS
+
+HTTP VERb
+app.get GET ดูข้อมูล
+app.POST POST เพิ่มข้อมูล
+app.PUT PUT แก้ไขข้อมูล
+app.PATCH PATCH แก้ไชช้อมูลบางส่วน
+app.DELETE DELETE ลบช้อมูล
+------------------------------------------
+
+API Client
+ใช้ทดสอบ API บน method ต่างๆ
+GET  /    app.get("/",()=>{})
+GET  /    app.get("/about",()=>{})
+
+
+
+
+Data ที่ส่งบน HTTP
+- Parmas  ข้อมูลที่ส่งมาใน packet/package
+ *JSON { name: "ppppppppppp", "address: "adddddd" }
+ *Form data <input>
+
+
