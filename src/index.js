@@ -14,7 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 
 const productRoute = require('./routes/productRoute');
+const employeeRoute = require('./routes/employeeRoute');
 app.use("/product", productRoute);
+app.use("/employee", employeeRoute);
 
 
 console.log();
@@ -39,11 +41,11 @@ console.log(process.env.PORT);
 
 ///////////////////////////////////////////////////////////////////////////////////
 //ตัวอย่างการบวกเลข num1 กับ num2
-// app.get("/fook/:num1/:num2", (req,res)=>{
-//     let sum = (req.params.num1*1) + (req.params.num2*1);
-//     //params = paramiters
-//         res.send(`Sum : ${sum}`);
-//     });
+app.get("/fook/:num1/:num2", (req,res)=>{
+    let sum = (req.params.num1*1) + (req.params.num2*1);
+    //params = paramiters
+        res.send(`Sum : ${sum}`);
+    });
 ////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -69,10 +71,17 @@ app.get("/",(req,res)=>{
 });
 
 
+//การบ้านข้อที่ 1
 
+// app.get("/employee", (req, res)=>{
+//     console.log("get all employees");
+//     res.send("get all employees");
+// });
 
-
-
+//การบ้านข้อที่ 2
+// app.get("/employee/:id", (req, res)=>{
+//     res.send(`employee ID : ${req.params.id}`);
+// });
 
 
 
